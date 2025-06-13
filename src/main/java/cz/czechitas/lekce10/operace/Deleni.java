@@ -29,7 +29,7 @@ public class Deleni implements Operace {
         if ((b > 0) && (a > 0) && (b > a) ){
             throw new IllegalArgumentException("Nelze delit mensi cislo vetsim.");
         }
-        if ((b < 0) && (a < 0) && (b < a)){
+        if ((b < 0) && (a < 0) && (b < a)) {
             throw new IllegalArgumentException("Nelze delit mensi zaporne cislo vetsim zapornym cislem.");
         }
 
