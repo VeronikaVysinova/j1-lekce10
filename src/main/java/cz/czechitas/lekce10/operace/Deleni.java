@@ -26,6 +26,13 @@ public class Deleni implements Operace {
         if (b == 0) {
             throw new IllegalArgumentException("Nelze dělit nulou.");
         }
+        if ((b > 0) && (a > 0) && (b > a) ){
+            throw new IllegalArgumentException("Nelze delit mensi cislo vetsim.");
+        }
+        if ((b < 0) && (a < 0) && (b < a)){
+            throw new IllegalArgumentException("Nelze delit mensi zaporne cislo vetsim zapornym cislem.");
+        }
+
         this.b = b;
     }
 
@@ -41,9 +48,6 @@ public class Deleni implements Operace {
 
     @Override
     public String vypocet() {
-        if (b == 0) {
-            throw new ArithmeticException("Nelze dělit nulou.");
-        }
         int vysledek = a / b;
         return "%d ÷ %d = %d".formatted(a, b, vysledek);
     }
